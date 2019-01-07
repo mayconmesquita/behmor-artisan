@@ -92,7 +92,7 @@ int afterburner = 0;                  // use as %, 100 is always on, 0 always of
 int lightState = LOW;                 // behmor Light State. default LOW
 
 void setup() {
-  Serial.begin(115200, SERIAL_8N1);
+  Serial.begin(115200, SERIAL_8N1); // Set this in Artisan
 
   // use establish contact if you want to wait until 'A' sent to Arduino before start - not used in this version
   // establishContact();  // send a byte to establish contact until receiver responds 
