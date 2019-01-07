@@ -19,8 +19,8 @@ SimpleTimer timer1; // Heater (OFF/ON cycle)
 SimpleTimer timer2; // After Burner (ON 238ms/4ms blink)
 SimpleTimer timer3; // Draw Fan  (ON 110ms/180ms blink)
 
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+#include <Adafruit_GFX.h> // Adafruit Display Lib
+#include <Adafruit_SSD1306.h> // Adafruit Display Lib
 
 #define OLED_RESET 4
 Adafruit_SSD1306 display(OLED_RESET);
@@ -53,8 +53,8 @@ const int SCKa = 3;    // SCKa pin on MAX6675
 const int CS1 = 6;     // CS (chip 1 select) pin on MAX6675
 const int CS2 = 5;     // CS (chip 2 select)  pin on MAX6675
 
-float dhtHumidity = 0.0;
-float dhtTemp = 0.0;
+float dhtHumidity = 0.0; // Init value
+float dhtTemp = 0.0; // Init value
 
 // time constants
 const int timePeriod = 2000;   // total time period of PWM milliseconds see note on setupPWM before changing
@@ -163,7 +163,7 @@ void establishContact() {
   }  
 }
 
-// #1 PWM Way
+// #1 PWM Way (for SSR use)
 void doPWM_Way() {
   // Heater (temp disabling)
   int heater100to255 = map(heater, 0, 100, 0, 255); // 0-100 to 0-255 (duty cycle)
