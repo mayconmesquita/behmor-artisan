@@ -5,7 +5,7 @@
 
 ## Description
 
-Control behmor 1600 plus coffee roaster through Artisan and RoastLogger using Arduino.
+Control behmor 1600 plus coffee roaster through Artisan and RoastLogger using Arduino. The sensor used for read behmor temp is MAX6675.
 
 ## Contribute
 
