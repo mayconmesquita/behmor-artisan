@@ -5,7 +5,7 @@
 
 ## Description
 
-Control behmor 1600 plus coffee roaster through Artisan using Arduino MEGA.
+Control behmor 1600 plus coffee roaster through Artisan and RoastLogger using Arduino.
 
 ## Contribute
 
