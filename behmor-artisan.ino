@@ -336,7 +336,9 @@ void coolFanOn(bool pwm) {
   }
 }
 
-void coolFanOff() { digitalWrite(coolFanPin, LOW); }
+void coolFanOff() {
+  digitalWrite(coolFanPin, LOW);
+}
 
 void lightToggle() {
   if (lightState == LOW) lightState = HIGH;
@@ -345,8 +347,12 @@ void lightToggle() {
   digitalWrite(lightPin, lightState);
 }
 
-void lightOn() {  digitalWrite(lightPin, HIGH); }
-void lightOff() { digitalWrite(lightPin, LOW); }
+void lightOn() {
+  digitalWrite(lightPin, HIGH);
+}
+void lightOff() {
+  digitalWrite(lightPin, LOW);
+}
 
 void powerOn() {
   setHeaterLevel(100);
@@ -381,8 +387,8 @@ void cool() {
  * Toggles the heater on/off based on the current heater level.
  ****************************************************************************/
 void controlRoaster() {
-  // doPWM_Way();
-  doToggle_Way();
+  // doPWM_Way(); // this mode will need SSR control
+  doToggle_Way(); // this mode will use native heater system
 }
 
 void setHeaterLevel(int h) {
